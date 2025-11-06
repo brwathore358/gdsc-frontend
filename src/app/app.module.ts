@@ -8,13 +8,15 @@ import { RegisterComponent } from './core/register/register.component';
 import { ForgetPasswordComponent } from './core/forget-password/forget-password.component';
 import { PagenotfoundComponent } from './core/pagenotfound/pagenotfound.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     RegisterComponent,
     ForgetPasswordComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,
