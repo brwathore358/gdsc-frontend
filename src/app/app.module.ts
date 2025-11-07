@@ -10,6 +10,7 @@ import { ForgotPasswordComponent } from './core/forget-password/forget-password.
 import { PagenotfoundComponent } from './core/pagenotfound/pagenotfound.component';
 import { ResetPasswordComponent } from './core/reset-password/reset-password.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ChangePasswordComponent } from './core/change-password/change-password.component';
 
 
 @NgModule({
@@ -19,9 +20,10 @@ import { HttpClientModule } from '@angular/common/http';
     RegisterComponent,
     ForgotPasswordComponent,
     PagenotfoundComponent,
-    ResetPasswordComponent
+    ResetPasswordComponent,
+    ChangePasswordComponent
   ],
-  imports: [
+  imports: [  
     BrowserModule,
     AppRoutingModule,
     FormsModule,

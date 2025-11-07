@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class AuthService {
-  private baseUrl='http://localhost:5000/api/auth';
+  private baseUrl='http://localhost:8080/api/auth';
 
   constructor(private http:HttpClient) { }
   forgotPassword(email:string):Observable<any>{
@@ -15,4 +15,8 @@ export class AuthService {
    resetPassword(token:string,password:string):Observable<any>{
     return this.http.post(`${this.baseUrl}/reset-password/{$token}`,{password});
    }
+   changePassword(payload: { username: string; oldPassword: string; newPassword: string }): Observable<any> {
+    return this.http.post(`${this.baseUrl}/change-password`, payload);
+  }
+
 }
