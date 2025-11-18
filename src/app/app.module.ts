@@ -15,7 +15,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { AboutComponent } from './pages/about/about.component';
 import { ServicesComponent } from './pages/services/services.component';
 import { ContactComponent } from './pages/contact/contact.component';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { HeaderComponent } from './shared-components/header/header.component';
+import { FooterComponent } from './shared-components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -30,6 +31,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     AboutComponent,
     ServicesComponent,
     ContactComponent,
+    HeaderComponent,
+    FooterComponent,
   ],
   imports: [
     BrowserModule,
