@@ -9,8 +9,13 @@ export class CenterService {
 
   constructor(private http: HttpClient) {}
 
+
   getCenters(): Observable<Center[]> {
     return this.http.get<Center[]>(this.baseUrl);
+  }
+
+  getCenterById(id: number): Observable<Center> {
+    return this.http.get<Center>(`${this.baseUrl}/${id}`);
   }
 
   createCenter(center: Center): Observable<any> {
@@ -25,7 +30,9 @@ export class CenterService {
     return this.http.delete(`${this.baseUrl}/${id}`);
   }
 
-  toggleStatus(id: number, p0: boolean): Observable<any> {
+ 
+  
+  toggleStatus(id: number, status: boolean): Observable<any> {
     return this.http.put(`${this.baseUrl}/${id}/toggle`, {});
   }
 }
