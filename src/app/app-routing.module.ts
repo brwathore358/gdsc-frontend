@@ -14,16 +14,15 @@ import { ResetPasswordComponent } from './auth/reset-password/reset-password.com
 import { RegisterComponent } from './auth/register/register.component';
 
 const routes: Routes = [
-  // Public
+  
   { path: 'forgot-password', component: ForgotPasswordComponent },
   { path: 'reset-password/:token', component: ResetPasswordComponent },
   { path: 'change-password', component: ChangePasswordComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'login', component: LoginComponent },
-
   { path: '', redirectTo: 'login', pathMatch: 'full' },
 
-  // Feature modules
+  
   {
     path: 'admin',
     canActivate: [AuthGuard, AdminGuard],
